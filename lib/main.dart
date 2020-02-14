@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
+import 'search/search.dart';
 
 import 'app.dart';
 import 'loading.dart';
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
           withZoom: true,
           withLocalStorage: true,
         ),
-        // "search": (_) => new WebviewScaffold(),
+        "search": (BuildContext context) => new SearchPage(),
       },
     );
   }
