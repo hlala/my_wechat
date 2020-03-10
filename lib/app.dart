@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_we_chat/chat/message_page.dart';
-import 'package:my_we_chat/chat/item_message_widget.dart';
-import 'package:my_we_chat/chat/message_data.dart';
+import 'package:my_we_chat/contacts/contact_page.dart';
 
 enum ItemType {
   GroupChat,
@@ -19,31 +18,26 @@ class App extends StatefulWidget {
 class AppPageState extends State<App> {
   int _currentIndex = 0;
 
-  List<Widget> widgetList = [
-    new MessagePage(),
-  ];
-  // StatefulWidget MessagePage messagePage;
-  // Widget ContactsPage contactsPage;  
+  MessagePage messagePage;
+  ContactPage contactsPage;  
   // Widget FindPage findPage;  
   // Widget PersonalPage personalPage;
 
   Widget _currentPage() {
     switch (_currentIndex) {
       case 0:
-        Widget res = widgetList[0];
-        if (res == null) {
-          res = new MessagePage();
-          widgetList[0] = res;
+        if (messagePage == null) {
+          messagePage = new MessagePage();
         }
 
-        return res;
+        return messagePage;
 
-      // case 1:
-      //   if (contactsPage == null) {
-      //     contactsPage = new ContactsPage();
-      //   }
+      case 1:
+        if (contactsPage == null) {
+          contactsPage = new ContactPage();
+        }
 
-      //   retuen contactsPage;
+        return contactsPage;
 
       // case 2:
       //   if (findPage == null) {

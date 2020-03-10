@@ -36,7 +36,6 @@ class _ItemMessageWidgetState extends State<ItemMessageWidget> {
           Container(
             margin: EdgeInsets.symmetric(horizontal: 10.0),
             // color: Colors.yellow,
-            width: 180.0,
             child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -47,7 +46,6 @@ class _ItemMessageWidgetState extends State<ItemMessageWidget> {
             ],
           ),
           ),
-          Text(_getTimeString()),
         ],
       ),
     );
